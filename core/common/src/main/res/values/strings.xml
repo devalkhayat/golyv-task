@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">weatherforecast</string>
+    <string name="feels_like">Feels like</string>
+    <string name="today_highlight">Today\'s Highlight</string>
+    <string name="wind_status">Wind Status</string>
+    <string name="humidity">Humidity</string>
+    <string name="memories">Memories</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="capture">Capture Photo</string>
+    <string name="save">Save</string>
+    <string name="recapture">Recapture</string>
+    <string name="empty">No captured photo found!</string>
+</resources>
