@@ -132,8 +132,8 @@ fun PreviewCapturedView(navHostController: NavHostController,bitmap: Bitmap,acti
                         //save to room
                         historyScreenViewModel.add(uri)
                         // go to home
-                        navHostController.navigate(HomeFeatureRoutes.nestedRoute) {
-                            popUpTo(HomeFeatureRoutes.homeScreenRoute) {
+                        navHostController.navigate(HomeFeatureRoutes.homeScreenRoute) {
+                            popUpTo(MemoriesFeatureRoutes.captureScreenRoute) {
                                 inclusive = true
                             }
                         }

@@ -71,6 +71,7 @@ import com.golyv.core.common.toDegree
 import com.golyv.core.common.toKm
 import com.golyv.core.common.toPercentage
 import com.golyv.core.common.R
+import com.golyv.core.navigation.MemoriesFeatureRoutes
 import com.golyv.features.memories.ui.screens.history.SummarySection
 import com.google.android.gms.location.LocationServices
 
@@ -133,7 +134,11 @@ fun CompactLayout(navHostController: NavHostController,data:WeatherInfoModel,vie
         .padding(4.dp)) {
         WeatherInfoSection(data,viewModel)
         HighLightSection(data)
-        SummarySection(navHostController,true)
+        SummarySection(onMove = {
+
+            navHostController.navigate(MemoriesFeatureRoutes.captureScreenRoute)
+
+        },true)
     }
 }
 @Composable
@@ -147,7 +152,11 @@ fun MediumLayout(navHostController: NavHostController,data:WeatherInfoModel,view
     ) {
         WeatherInfoSection(data,viewModel)
         HighLightSection(data)
-        SummarySection(navHostController,true)
+        SummarySection(onMove = {
+
+            navHostController.navigate(MemoriesFeatureRoutes.captureScreenRoute)
+
+        },true)
     }
 }
 @Composable
@@ -158,7 +167,11 @@ fun ExpandedLayout(navHostController: NavHostController,data:WeatherInfoModel,vi
         .padding(4.dp)) {
         WeatherInfoSection(data,viewModel)
         HighLightSection(data)
-        SummarySection(navHostController,true)
+        SummarySection( onMove = {
+
+            navHostController.navigate(MemoriesFeatureRoutes.captureScreenRoute)
+
+        },true)
     }
 }
 

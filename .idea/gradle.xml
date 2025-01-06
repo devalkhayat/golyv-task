@@ -20,6 +20,8 @@
             <option value="$PROJECT_DIR$/features/home/data" />
             <option value="$PROJECT_DIR$/features/home/domain" />
             <option value="$PROJECT_DIR$/features/home/ui" />
+            <option value="$PROJECT_DIR$/features/launch" />
+            <option value="$PROJECT_DIR$/features/launch/ui" />
             <option value="$PROJECT_DIR$/features/memories" />
             <option value="$PROJECT_DIR$/features/memories/data" />
             <option value="$PROJECT_DIR$/features/memories/domain" />

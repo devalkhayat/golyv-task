@@ -71,6 +71,7 @@ dependencies {
     implementation(project(":features:memories:ui"))
     implementation(project(":features:memories:domain"))
     implementation(project(":features:memories:data"))
+    implementation(project(":features:launch:ui"))
     implementation(project(":core:common"))
     implementation(project(":core:navigation"))
 

@@ -28,12 +28,6 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val permissions= arrayOf(
-        Manifest.permission.ACCESS_COARSE_LOCATION,
-        Manifest.permission.ACCESS_FINE_LOCATION,
-        Manifest.permission.CAMERA,
-
-        )
 
     @Inject
     lateinit var navigationProvider: NavigationProvider
@@ -42,23 +36,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             WeatherforecastTheme {
-
-                var viewModel= viewModel<PermissionsViewModel>()
-                var multiplePermissionResultLauncher= rememberLauncherForActivityResult(
-                    contract = ActivityResultContracts.RequestMultiplePermissions(),
-                    onResult = { perms ->
-                        permissions.forEach {
-                            viewModel.onPermissionResult(permission=it,isGranted=perms[it]==true)
-                        }
-                    }
-                )
-
                 val navController= rememberNavController()
                 App(navHostController = navController,navigationProvider)
-
-                SideEffect {
-                    multiplePermissionResultLauncher.launch(permissions)
-                }
             }
         }
     }

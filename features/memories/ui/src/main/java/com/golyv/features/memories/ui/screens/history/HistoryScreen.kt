@@ -48,7 +48,7 @@ fun HistoryScreen(){
 }
 
 @Composable
-fun SummarySection(navHostController: NavHostController, isShown:Boolean=false){
+fun SummarySection(onMove:()->Unit, isShown:Boolean=false){
     if(isShown) {
         val historyScreenViewModel = hiltViewModel<HistoryScreenViewModel>()
         LaunchedEffect(true) {
@@ -100,12 +100,7 @@ fun SummarySection(navHostController: NavHostController, isShown:Boolean=false){
 
             AppButton(title = stringResource(R.string.take_photo)) {
 
-                navHostController.navigate(MemoriesFeatureRoutes.nestedRoute) {
-                    popUpTo(MemoriesFeatureRoutes.captureScreenRoute) {
-                        inclusive = true
-                    }
-                }
-
+               onMove()
 
             }
 

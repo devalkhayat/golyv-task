@@ -18,6 +18,8 @@ val AppLightGray2= Color(0xFF272727)
 val AppLightGray3=Color(0xFFB9B9B9)
 val AppBlue = Color(0xFF2196F3)
 val AppPink = Color(0xFF9C27B0)
+val AppRed = Color(0xFFE3005E)
+val AppGreen = Color(0xFF4CAF50)
 
 //
 fun  getColor(type:AppColors):Color{
@@ -33,6 +35,8 @@ fun  getColor(type:AppColors):Color{
         AppColors.ContainerBackground3 -> AppBlue
         AppColors.Button1 -> AppLightGray1
         AppColors.Button2 -> AppPink
+        AppColors.Error -> AppRed
+        AppColors.Success -> AppGreen
     }
 }
 sealed class AppColors{
@@ -47,4 +51,6 @@ sealed class AppColors{
     data object ContainerBackground3:AppColors()
     data object Button1:AppColors()
     data object Button2:AppColors()
+    data object Success:AppColors()
+    data object Error:AppColors()
 }

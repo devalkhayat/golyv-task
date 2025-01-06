@@ -8,5 +8,9 @@ object MemoriesFeatureRoutes{
     const val nestedRoute="memories_nested_route"
     const val historyScreenRoute="history_screen_route"
     const val captureScreenRoute="capture_screen_route"
-    const val previewScreenRoute="preview_screen_route"
+}
+
+object LaunchFeatureRoutes{
+    const val nestedRoute="launch_nested_route"
+    const val launchScreenRoute="launch_screen_route"
 }
